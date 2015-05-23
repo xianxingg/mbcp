@@ -16,5 +16,6 @@
     # set ( array ) count
     awk '{ for (i = 2; i <= NF; i++) Numbers[$i] ++ } END { for (course in Numbers) printf("%10s %d\n", course, Numbers[course] }' src.txt
     
-    
+    # redirect
+    awk 'BEGIN { print "header" > "outFile.txt"  }'
 ```
